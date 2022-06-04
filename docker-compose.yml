@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+  application:
+    image: ${IMAGE}
+    container_name: ${APP_NAME}-app
+    restart: on-failure
+    working_dir: /config
+    volumes:
+    - config:/config/
+    ports:
+      - '5800:5800' # Web GUI
+      - '5900:5900' # VNC
+  
+volumes:
+  config:
+    name: ${APP_NAME}-config
+    
+networks:
+  application:
+    name: ${APP_NAME}-network
