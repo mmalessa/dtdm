@@ -8,8 +8,8 @@ services:
     volumes:
     - config:/config/
     ports:
-      - '5800:5800' # Web GUI
-      - '5900:5900' # VNC
+      - '5800:5800' # TDM Web GUI
+      - '5900:5900' # TDM VNC
   
 volumes:
   config:

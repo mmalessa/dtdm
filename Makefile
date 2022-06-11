@@ -28,6 +28,7 @@ up: ## Start application container
 	IMAGE=$(IMAGE) \
 	APP_NAME=$(APP_NAME) \
 	docker-compose up -d
+	@cat docker-compose.yml | grep "# TDM"
 
 down: ## Remove application dev container
 	@COMPOSE_PROJECT_NAME=$(APP_NAME) \
